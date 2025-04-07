@@ -15,15 +15,11 @@ export default function Navbar() {
         }
     }
 
-    function uploadImageDIsplay() {
-
-    }
-
     return (
         <>
             <nav>
                 <div className="left">
-                    <h1>Sneakers</h1>
+                    <h1>sneakers</h1>
                     <a className='weight-400' href="#">Collections</a>
                     <a className='weight-400' href="#">Men</a>
                     <a className='weight-400' href="#">Women</a>
@@ -36,7 +32,7 @@ export default function Navbar() {
                         <img src={avatarUrl} alt="User Image" className="user-img" />
 
                         <form className="form">
-                            <button onChange={uploadImageDIsplay} onClick={handleImageUpload} type='submit'>
+                            <button onClick={handleImageUpload} type='submit'>
                                 <i className="fa-solid fa-pen-to-square"></i>
                             </button>
                             <input

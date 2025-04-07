@@ -1,0 +1,165 @@
+.card {
+    margin: 30px 0px 0px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1015px;
+    height: 565px;
+}
+
+.card .card-right,
+.card .card-left {
+    width: 445px;
+}
+
+.selected-img {
+    width: 445px;
+    height: 445px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.thumbnail-imgs {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    height: 88px;
+    width: 100%;
+    gap: 31px;
+    cursor: pointer;
+}
+
+.thumbnail-imgs img {
+    width: 88px;
+    height: 88px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.thumbnail-imgs img.selected {
+    border: 2px solid #FF7E1B;
+}
+
+.card-right {
+    height: 426px;
+}
+
+h5 {
+    line-height: 100%;
+    margin-bottom: 1px;
+    list-style-position: outside;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FF7E1B;
+    margin-bottom: 27px;
+}
+
+h1 {
+    font-size: 44px;
+    line-height: 48px;
+    letter-spacing: 0px;
+    margin-bottom: 32px;
+}
+
+p.description {
+    color: #69707D;
+    margin-bottom: 24px;
+}
+
+.price {
+    width: 173px;
+    height: 68px;
+}
+
+.current-and-discount-percent {
+    display: flex;
+    justify-content: space-between;
+    width: 173px;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0px;
+}
+
+span {
+    background-color: #FFEEE2;
+    padding: 7px 8px 4px 8px;
+    color: #FF7E1B;
+    border-radius: 6px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 10px;
+    letter-spacing: 0px;
+    text-decoration: line-through;
+    color: #B6BCC8;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 32px;
+    height: 56px;
+}
+
+.plus-minus-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 157px;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #F6F8FD;
+    padding: 0px 22px;
+    visibility: hidden;
+    position: absolute;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.plus-minus-btns.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.plus-minus-btns button {
+    background-color: transparent;
+    width: 12px;
+    height: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.plus-minus-btns i {
+    color: #FF7E1B;
+    font-weight: bolder;
+}
+
+.plus-minus-btns p {
+    color: #1D2026;
+}
+
+.add-to-cart {
+    width: 100%;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #FF7E1B;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    transition: width 0.4s ease-in-out;
+}
+
+.add-to-cart.active {
+    width: 272px;
+    right: 0;
+}
+
+.add-to-cart i {
+    margin-right: 16px;
+}
