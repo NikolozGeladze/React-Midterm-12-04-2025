@@ -1,0 +1,48 @@
+.cart i {
+    color: #1D2026;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.dropdown {
+    position: absolute;
+    top: -256px;
+    left: 991px;
+    Width: 360px;
+    Height: 256px;
+    border-radius: 10px;
+    box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.5031);
+    z-index: 999999;
+    background-color: white;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.dropdown.show {
+    top: 94px;
+    left: 991px;
+    opacity: 1;
+}
+
+.cart-header {
+    padding: 24px;
+}
+
+.line {
+    background-color: #E4E9F2;
+    width: 100%;
+    height: 1px;
+}
+
+.content {
+    height: 187px;
+}
+
+.content .empty-cart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #69707D;
+}
