@@ -2,6 +2,27 @@
     color: #1D2026;
     cursor: pointer;
     font-size: 20px;
+    position: relative;
+}
+
+i label {
+    width: 19px;
+    height: 13px;
+    top: -10px;
+    right: -10px;
+    position: absolute;
+    border-radius: 6.5px;
+    background-color: #FF7E1B;
+    display: none;
+    color: white;
+    font-weight: 700;
+    font-size: 10px;
+    justify-content: center;
+    padding: 3px 7px 0px 7px;
+}
+
+i label.show {
+    display: flex;
 }
 
 .dropdown {
@@ -20,7 +41,6 @@
 
 .dropdown.show {
     top: 94px;
-    left: 991px;
     opacity: 1;
 }
 
@@ -36,6 +56,8 @@
 
 .content {
     height: 187px;
+    padding: 24px 24px 32px 24px;
+    position: relative;
 }
 
 .content .empty-cart {
@@ -45,4 +67,68 @@
     justify-content: center;
     align-items: center;
     color: #69707D;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 312px;
+    height: 52px;
+}
+
+.item img {
+    border-radius: 4px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.info {
+    margin-right: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #69707D;
+}
+
+.info p.title {
+    width: 213px;
+}
+
+.info .price {
+    height: 26px;
+    width: 152px;
+}
+
+.item .price strong {
+    margin-left: 6px;
+    color: black;
+}
+
+.item i {
+    color: #C3CAD9;
+}
+
+.content button.checkout-btn {
+    width: calc(100% - 48px);
+    bottom: 32px;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #FF7E1B;
+    color: white;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .dropdown {
+        left: 8px;
+    }
+
+    .dropdown.show {
+        top: 76px;
+    }
 }

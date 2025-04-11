@@ -1,5 +1,7 @@
 body {
   padding: 0px 165px;
+  min-height: 100vh;
+  min-width: 100%;
 }
 
 .weight-400 {
@@ -8,4 +10,19 @@ body {
 
 .weight-700 {
   font-weight: 700;
+}
+
+@media (max-width: 750px) {
+  body {
+    padding: 0px;
+  }
+
+  .overlay.active {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 1000;
+  }
 }
