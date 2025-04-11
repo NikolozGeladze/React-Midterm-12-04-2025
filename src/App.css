@@ -1,5 +1,4 @@
 body {
-  padding: 0px 165px;
   min-height: 100vh;
   min-width: 100%;
 }
@@ -14,7 +13,7 @@ body {
 
 @media (max-width: 750px) {
   body {
-    padding: 0px;
+    padding: 0px !important;
   }
 
   .overlay.active {
@@ -24,5 +23,23 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
     z-index: 1000;
+  }
+}
+
+@media (min-width: 750px) {
+  body {
+    padding: 0px 20px !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    padding: 0px 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 0px 165px !important;
   }
 }

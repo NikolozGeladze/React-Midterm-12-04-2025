@@ -28,9 +28,9 @@ i label.show {
 .dropdown {
     position: absolute;
     top: -256px;
-    left: 991px;
-    Width: 360px;
-    Height: 256px;
+    right: 89px;
+    width: 360px;
+    min-height: 256px;
     border-radius: 10px;
     box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.5031);
     z-index: 999999;
@@ -55,7 +55,7 @@ i label.show {
 }
 
 .content {
-    height: 187px;
+    min-height: 187px;
     padding: 24px 24px 32px 24px;
     position: relative;
 }
@@ -74,8 +74,8 @@ i label.show {
     align-items: center;
     justify-content: center;
     gap: 16px;
-    width: 312px;
-    height: 52px;
+    width: 100%;
+    min-height: 52px;
 }
 
 .item img {
@@ -126,9 +126,21 @@ i label.show {
 @media (max-width: 500px) {
     .dropdown {
         left: 8px;
+        width: calc(100% - 16px);
     }
 
     .dropdown.show {
         top: 76px;
+    }
+}
+
+@media (max-width: 620px) {
+    .dropdown.show {
+        top: 70px;
+    }
+
+    .dropdown .item {
+        display: flex;
+        justify-content: space-between;
     }
 }

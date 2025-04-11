@@ -376,3 +376,38 @@ h3 {
         cursor: default;
     }
 }
+
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        height: fit-content;
+    }
+    
+    .selected-img:hover {
+        transform: none;
+    }
+
+    .thumbnail-imgs {
+        margin-bottom: 20px;
+    }
+
+    .thumbnail-imgs img:hover {
+        border: none;
+        opacity: 1;
+        cursor: default;
+    }
+
+    .add-to-cart:hover {
+        background-color: #FF7E1B;
+    }
+
+    .plus-minus-btns:hover {
+        color: #FF7E1B;
+    }
+}
+
+@media (max-width: 1350px) {
+    .card {
+        margin: 20px 0;
+    }
+}

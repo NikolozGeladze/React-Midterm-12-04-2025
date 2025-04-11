@@ -106,7 +106,7 @@ nav {
     border: 2px solid #FF7E1B;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
     nav {
         padding: 19px 24px;
         height: 62px;

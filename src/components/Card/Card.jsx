@@ -18,29 +18,29 @@ export default function Card({ addToCart, removeItem, product, quantityRemoved }
     }, [quantityRemoved]);
 
     function addToCardActive() {
-        if (quantity == 0) {
-            setQuantity(1)
+        if (quantity === 0) {
+            setQuantity(1);
+            addToCart(product, 1);
+        } else {
+            addToCart(product, quantity);
         }
         setIsActive(true);
-        addToCart(product, quantity + 1);
     }
-
+    
     function changeQuantity(plusMinus) {
-        if (plusMinus == 'plus') {
-            const newQuantity = quantity + 1;
-            setQuantity(newQuantity);
-            addToCart(product, newQuantity);
-        } else if (plusMinus == 'minus') {
-            if (quantity == 1) {
+        if (plusMinus === 'plus') {
+            setQuantity(quantity + 1);
+        } else if (plusMinus === 'minus') {
+            if (quantity > 1) {
+                setQuantity(quantity - 1);
+            } else if (quantity === 1) {
+                setQuantity(0);
                 setIsActive(false);
-                removeItem(product.id)
-            } else {
-                const newQuantity = quantity - 1;
-                setQuantity(newQuantity);
-                addToCart(product, newQuantity);
+                removeItem(product.id);
             }
         }
     }
+    
 
     function sliderSlideChange(plusMinusSlides) {
         if (plusMinusSlides == 'minus') {
