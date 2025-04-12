@@ -84,7 +84,7 @@ export default function Card({ addToCart, removeItem, product, quantityRemoved }
     return (
         <>
             <div className="card">
-                <div className="added-to-cart">Item Added To Cart</div>
+                <div className="added-to-cart weight-700">Item Added To Cart</div>
                 <div className={`fullscreen ${isFullscreen ? 'active' : ''}`}>
                     <div className="full-screen-images">
                         <i onClick={closeFullscreen} className="fa-solid fa-xmark"></i>
