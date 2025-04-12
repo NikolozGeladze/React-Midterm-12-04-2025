@@ -18,15 +18,25 @@ export default function Card({ addToCart, removeItem, product, quantityRemoved }
     }, [quantityRemoved]);
 
     function addToCardActive() {
+        const addedToCart = document.querySelector('.added-to-cart');
         if (quantity === 0) {
             setQuantity(1);
             addToCart(product, 1);
+            addedToCart.classList.add('active');
+            setTimeout(() => {
+                addedToCart.classList.remove('active');
+            }, 2000);
         } else {
+            addedToCart.classList.add('active');
+            setTimeout(() => {
+                addedToCart.classList.remove('active');
+            }, 2000);
             addToCart(product, quantity);
         }
         setIsActive(true);
     }
-    
+
+
     function changeQuantity(plusMinus) {
         if (plusMinus === 'plus') {
             setQuantity(quantity + 1);
@@ -40,7 +50,7 @@ export default function Card({ addToCart, removeItem, product, quantityRemoved }
             }
         }
     }
-    
+
 
     function sliderSlideChange(plusMinusSlides) {
         if (plusMinusSlides == 'minus') {
@@ -66,14 +76,15 @@ export default function Card({ addToCart, removeItem, product, quantityRemoved }
         setSelectedImgFullscreen(img);
         setSlide(images.indexOf(img));
     }
-    
+
     function closeFullscreen() {
         setIsFullscreen(false);
     }
-    
+
     return (
         <>
             <div className="card">
+                <div className="added-to-cart">Item Added To Cart</div>
                 <div className={`fullscreen ${isFullscreen ? 'active' : ''}`}>
                     <div className="full-screen-images">
                         <i onClick={closeFullscreen} className="fa-solid fa-xmark"></i>
@@ -123,6 +134,15 @@ export default function Card({ addToCart, removeItem, product, quantityRemoved }
                 <div className="card-right">
                     <h5 className='weight-700'>{product.company}</h5>
                     <h1 className='weight-700'>{product.title}</h1>
+                    <div className="rating">
+                        {[...Array(5)].map((_, index) => (
+                            <i
+                                key={index}
+                                className={`fa-solid fa-star ${index < product.rating ? 'filled' : ''}`}
+                            ></i>
+                        ))}
+                        ({product.reviews})
+                    </div>
                     <p className='description'>{product.description}</p>
                     <div className="price">
                         <div className="current-and-discount-percent">

@@ -6,6 +6,29 @@
     height: 565px;
 }
 
+.added-to-cart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #69707D;
+    font-size: 23px;
+    width: 300px;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition:  0.8s ease-in-out;
+}
+
+.added-to-cart.active {
+    opacity: 1;
+    visibility: visible !important;
+}
+
 .card .card-right,
 .card .card-left {
     width: 445px;
@@ -102,7 +125,22 @@ h1 {
     font-size: 44px;
     line-height: 48px;
     letter-spacing: 0px;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+}
+
+.card-right .rating {
+    margin-bottom: 16px;
+    font-size: 15px;
+    color: #69707D;
+}
+
+.card-right i.fa-star {
+    color: #d3d3d3;
+    font-size: 23px;
+}
+
+.card-right i.fa-star.filled {
+    color: #f39c12;
 }
 
 p.description {

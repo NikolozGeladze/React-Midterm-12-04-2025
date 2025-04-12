@@ -7,6 +7,8 @@ var products = [
         currentPrice: 125,
         beforeDiscount: 250,
         discountPercent: 50,
+        rating: 4,
+        reviews: 23,
         images: ["image 1.png", "image 2.png", "image 3.png", "image 4.png",],
     }
 ]
